@@ -5,5 +5,11 @@ def save_file(jobs):
   writer = csv.writer(file)
 
   writer.writerow(
-    ["title", "company", "location", "link"])
+    ["title", "company", "location", "link"]
+    )
+  # print(jobs)
+
+  # csv file write
+  for job in jobs:
+    writer.writerow(list(job.values()))
   return
