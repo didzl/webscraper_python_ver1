@@ -33,7 +33,7 @@ def extract_jobs(last_page):
   print(last_page)
   for page in range(last_page):
 
-    # 현재 295페이지를 가르키지만 정작 스크래핑은 1페이지만 함
+    
     print(f"Scrapping stack page: {page}")
 
     result = requests.get(f"{URL}&pg={page+1}")
@@ -47,8 +47,8 @@ def extract_jobs(last_page):
       jobs.append(job)
       
       # print(job)
-    print(jobs)
-    return jobs
+    
+  return jobs
 
 
 
